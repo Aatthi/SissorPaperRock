@@ -1,0 +1,63 @@
+<!DOC HTMl> 
+<html>
+
+<script>
+
+
+// this is only still executing my else statement. Anything that I need to change?
+
+function computerPlay() {
+let choice = ['rock', 'paper', 'scissor'];
+let randomChoice = [Math.floor(Math.random()*choice.length)];
+return randomChoice;
+}
+
+function playGame(playerSelection, computerSelection) {
+  if (playerSelection == "scissor" && computerSelection == "paper"){
+      return "You Won";
+  } else if (playerSelection == "paper" && computerSelection == "rock"){
+      return "You Won";
+  } else if (playerSelection == "rock" && computerSelection == "scissor"){
+      return "You Won";
+  } else if (playerSelection == "scissor" && computerSelection == "rock"){
+      return "You Lost";
+  } else if (playerSelection == "paper" && computerSelection == "scissor"){
+      return "You Lost";
+  } else if (playerSelection == "rock" && computerSelection == "paper"){
+      return "You Lost";
+  } else if (playerSelection == "rock" && computerSelection == "rock"){
+      return "Draw";
+  } else if (playerSelection == "scissor" && computerSelection == "scissor"){
+      return "Draw";
+  } else if (playerSelection == "paper" && computerSelection == "paper"){
+      return "Draw";
+  } else {
+    return'Invalid response, this is case insensitive. Please input either scissor, paper or rock';
+  }
+}
+
+function game() {
+  let roundOne = playGame(playerSelection, computerSelection);
+  let roundTwo = playGame(playerSelection, computerSelection);
+  let roundThree = playGame(playerSelection, computerSelection);
+  let roundFour = playGame(playerSelection, computerSelection);
+  let roundFive = playGame(playerSelection, computerSelection);
+  
+  console.log('Round 1 = ' + roundOne);
+  console.log('Round 2 = ' + roundTwo);
+  console.log('Round 3 = ' + roundThree);
+  console.log('Round 4 = ' + roundFour);
+  console.log('Round 5 = ' + roundFive);
+ 
+}
+
+let playerSelection = prompt("Please select one", "scissor/paper/rock");
+let computerSelection = computerPlay();
+console.log(playGame(playerSelection, computerSelection));
+
+// this is only still executing my else statement. Anything that I need to change?
+
+
+</script>
+
+</html>
